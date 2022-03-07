@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.container {
+    background-color: rgb(241, 255, 241);
+}
+
+header {
+    background-color: white;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-header {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: rgb(1, 78, 38);
+}
+
+ul {
+    display: flex;
+    cursor: pointer;
+    margin-left: 10rem;
+}
+
+li {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-left: 5rem;
+}
+
+.container-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 2rem;
+}
+
+.title-intro {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(1, 78, 38);
+    padding: 1rem;
+}
+
+.p-intro {
+    font-size: 1.3rem;
+}
+
+.dog-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 2rem;
+}
+
+.container-adopt {
+    background-color: rgb(1, 78, 38);
+}
+
+.box-adopt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-adopt {
+    height: 3rem;
+    width: 5rem;
+    color: black;
+    background-color: white;
+    border: transparent;
+    cursor: pointer;
+}
+
+.button-clear {
+    height: 3rem;
+    width: 5rem;
+    color: black;
+    background-color: white;
+    margin-left: 3rem;
+    border: transparent;
+    cursor: pointer;
+}
+
+.img-dogs {
+    width: 17%;
+    margin-left: 3rem;
+}
+
+.container-dog {
+    background-color: rgb(241, 255, 241);
+}
+
+.container-dog-adoption {
+    background-color: rgb(241, 255, 241);
+}
+
+.imgs-dog-adoption {
+    border: red solid;
+    height: 10rem;
+    width: 10rem;
+}
+
+.dogs-adoption {
+    height: 10rem;
+}
+
+.info-dog {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+@media(max-width: 480px) {}
