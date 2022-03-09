@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/desafio-PetLoveAdoption/static/css/main.3c843b73.css",
+    "main.js": "/desafio-PetLoveAdoption/static/js/main.cb5702ea.js",
+    "static/js/787.046ac7de.chunk.js": "/desafio-PetLoveAdoption/static/js/787.046ac7de.chunk.js",
+    "static/media/dog3.png": "/desafio-PetLoveAdoption/static/media/dog3.82b92ae13c7a0332bc0f.png",
+    "static/media/instagram-logo.png": "/desafio-PetLoveAdoption/static/media/instagram-logo.39a99a2ae63f94155dc1.png",
+    "static/media/dog2.png": "/desafio-PetLoveAdoption/static/media/dog2.7aab403295541ab7bcfc.png",
+    "static/media/dog1.png": "/desafio-PetLoveAdoption/static/media/dog1.b57191b466a52cacfea2.png",
+    "static/media/dog5.png": "/desafio-PetLoveAdoption/static/media/dog5.b1d87fd18a18ff5d5bbb.png",
+    "static/media/cachorros.png": "/desafio-PetLoveAdoption/static/media/cachorros.7e97f06d57c48213a7ff.png",
+    "static/media/dog4.png": "/desafio-PetLoveAdoption/static/media/dog4.9ee91e16abe25212e669.png",
+    "static/media/cao-adote.png": "/desafio-PetLoveAdoption/static/media/cao-adote.345dfc31e32b991d2ecb.png",
+    "static/media/logo-face.jpg": "/desafio-PetLoveAdoption/static/media/logo-face.9b126869bcabfbd2bd1d.jpg",
+    "index.html": "/desafio-PetLoveAdoption/index.html",
+    "main.3c843b73.css.map": "/desafio-PetLoveAdoption/static/css/main.3c843b73.css.map",
+    "main.cb5702ea.js.map": "/desafio-PetLoveAdoption/static/js/main.cb5702ea.js.map",
+    "787.046ac7de.chunk.js.map": "/desafio-PetLoveAdoption/static/js/787.046ac7de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c843b73.css",
+    "static/js/main.cb5702ea.js"
+  ]
+}
