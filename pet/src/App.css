@@ -6,10 +6,6 @@
     scroll-behavior: smooth;
 }
 
-.container {
-    background-color: rgb(241, 255, 241);
-}
-
 header {
     background-color: white;
     height: 6rem;
@@ -25,13 +21,12 @@ header {
     color: rgb(1, 78, 38);
 }
 
-ul {
+.list-nav {
     display: flex;
     cursor: pointer;
-    margin-left: 10rem;
 }
 
-li {
+.item-nav {
     font-size: 1.5rem;
     font-weight: 100;
     margin-left: 5rem;
@@ -41,6 +36,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    background-color: rgb(241, 255, 241);
 }
 
 .box-intro {
@@ -74,53 +71,59 @@ li {
 
 .container-adopt {
     background-color: rgb(1, 78, 38);
+    width: 100%;
+    background: #fff;
+    display: block;
 }
 
 .box-adopt {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.p-button {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(1, 78, 38);
 }
 
 .button-adopt {
     height: 3rem;
     width: 5rem;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: rgb(1, 78, 38);
     border: transparent;
+    border-radius: 4% 4% 4% 4%;
     cursor: pointer;
+    margin: 2rem;
 }
 
-.button-clear {
-    height: 3rem;
-    width: 5rem;
-    color: black;
-    background-color: white;
-    margin-left: 3rem;
-    border: transparent;
-    cursor: pointer;
-}
-
-.img-dogs {
-    width: 17%;
-    margin-left: 3rem;
-}
-
-.container-dog {
-    background-color: rgb(241, 255, 241);
+.list-dogs {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .container-dog-adoption {
-    background-color: rgb(241, 255, 241);
+    background-color: white;
+    border: rgb(1, 78, 38) solid 5px;
+    border-radius: 12% 12% 12% 12%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
 }
 
-.imgs-dog-adoption {
-    border: red solid;
-    height: 10rem;
-    width: 10rem;
-}
-
-.dogs-adoption {
+.imgs-dogs-adoption {
     height: 10rem;
 }
 
@@ -129,4 +132,101 @@ li {
     font-size: 1rem;
 }
 
-@media(max-width: 480px) {}
+.end-main {
+    background-color: rgb(241, 255, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 5rem;
+    color: rgb(1, 78, 38);
+}
+
+.box-end-main {
+    text-align: center;
+    width: 40%;
+}
+
+.img-and-main {
+    width: 60%;
+}
+
+footer {
+    background-color: rgb(1, 78, 38);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 100;
+    justify-content: space-around;
+}
+
+.box-redes-sociais {
+    display: flex;
+}
+
+.logo-instagram {
+    height: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.logo-face {
+    height: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+@media(max-width: 480px) {
+    .title-header {
+        font-size: 1rem;
+    }
+    .list-nav {
+        display: none;
+    }
+    .container-intro {
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .box-intro {
+        width: 100%;
+        padding: 1rem;
+    }
+    .title-intro {
+        font-size: 1rem;
+    }
+    .p-intro {
+        font-size: 1.3rem;
+    }
+    .list-dogs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container-dog-adoption {
+        width: 100%;
+    }
+    .end-main {
+        flex-direction: column;
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+    .box-end-main {
+        text-align: center;
+        width: 100%;
+    }
+    .img-and-main {
+        width: 90%;
+    }
+    footer {
+        padding: 1rem;
+        flex-direction: column;
+        font-size: 0.8rem;
+    }
+    .box-redes-sociais {
+        padding: 0.5rem;
+    }
+    .endereço {
+        font-size: 0.6rem;
+    }
+}

@@ -1,18 +1,22 @@
 import React, {Component} from 'react'
 import './App.css';
 import img3 from "./assets/cao-adote.png";
-import img5 from "./assets/caos-adote.png";
 import dog1 from "./assets/dog1.png";
 import dog2 from "./assets/dog2.png";
 import dog3 from "./assets/dog3.png";
 import dog4 from "./assets/dog4.png";
 import dog5 from "./assets/dog5.png";
+import logoInsta from "./assets/instagram-logo.png"
+import logoFace from "./assets/logo-face.jpg"
+import dogs from "./assets/cachorros.png"
+
 
 
 
 class App extends Component{
   state = {
-    list: [],
+    isShowList: false,
+    list:[],
     dogs: [
       {
           name: "Afonso",
@@ -50,56 +54,52 @@ class App extends Component{
          img: dog5
      }
      
-    ]
+        ]
   }
 
-  listDogs = () => {
+  handleShowList = () => {
     this.setState({
-      list: this.state.dogs.map((item) => (
-<section className='container-dog-adoption'>
-  <div className='imgs-dog-adoption' >
-<img  className='dogs-adoption' src={item.img} />
-  </div>
-<div>
-  <h2 className='info-dog'> Nome: {item.name}</h2>
-  <h2 className='info-dog' >Idade: {item.age}</h2>
-  <h2 className='info-dog' >Sexo: {item.sex}</h2>
-  <h2 className='info-dog' >Raça: {item.breed}</h2>
-  </div>
-</section>
-      ))
-    })
+      isShowList: !this.state.isShowList /* a exclamação é operador de negação - vai me retornar o contrário */
+  })
   }
+ 
+ renderList = () => (
+   this.state.dogs.map((item) => (
+    <li className='container-dog-adoption'>
+    <img className='imgs-dogs-adoption' src={item.img} />
+    <div className='box-info-dog'>
+      <h2 className='info-dog'> Nome: {item.name}</h2>
+      <h2 className='info-dog' >Idade: {item.age}</h2>
+      <h2 className='info-dog' >Sexo: {item.sex}</h2>
+      <h2 className='info-dog' >Raça: {item.breed}</h2>
+      </div>
+    </li>
+          ))
+   )
 
-  clear = () => {
-    this.setState({
-      list: []
-    });
-  };
 
   render(){
-    let {listDogs, clear} = this
+    let {handleShowList} = this
     return(
       <div className='container'>
         <header>
         <h2 className='title-header'>PetLove Adoption</h2>
         <nav>
-          <ul>
-            <li>
+          <ul className='list-nav'>
+            <li className='item-nav'>
               <a href="topo">INÍCIO</a>
             </li>
-            <li>
-              <a href="adot">ADOTE</a>
+            <li className='item-nav'>
+              <a href="#adot">ADOTE</a>
             </li> 
-            <li>
-              <a href="end">CONTATO</a>
+           <li className='item-nav'>
+            <a href="#end">CONTATO</a>
             </li>
           </ul>
           </nav>
         </header>
 
         <main>
-
           <section className='container-intro'>
             <div className='box-intro'>
                 <h2 className='title-intro'>AMIGO NÃO SE COMPRA!</h2>
@@ -109,25 +109,35 @@ class App extends Component{
             <img  src={img3} alt="Cachorrinho segurando coração" />
             </div>
             </section>
-
             <section className='container-adopt'>
+              <p className='p-button'> Temos uma lista de amigos disponíveis! </p>
             <div className='box-adopt'>
-               <button className='button-adopt' onClick={listDogs}> ADOTAR </button>
-                <button className='button-clear' onClick={clear}> LIMPAR  </button>
-                <img className='img-dogs' src={img5} alt="Cachorros deitados" />
+               <button id="adot" className='button-adopt' onClick={handleShowList}> VER LISTA </button>
             </div>
+               {this.state.isShowList && <ul className='list-dogs'>{this.renderList()}</ul>}
           </section>
-
-          <section className='container-dogs'>
-            <div className='box-dogs'>
-                <h3>{this.state.list}</h3>
-               
-            </div>
-          </section>
-
+      <section className='end-main'>
+        <div className='box-end-main'>
+        <h3 className='title-end-main'>A carinha de quem vai te fazer feliz!</h3>
+        <p className='p-end-main'>Adotar é encher de esperanças um coração que antes não sabia o que era carinho, e receber em troca um presente único: O Amor Incondicional. Adote!</p>
+        </div>
+      <img className='img-and-main' src={dogs} alt="Cachorros juntos" />
+      </section>
         </main>
 
-     
+         <footer id="end">
+         <p className='contato'>Contato: (21) 1234-56789</p>
+          <div className='box-redes-sociais'>
+          <p className='p-redes-sociais'>Redes Sociais: </p>
+          <a href="https://www.instagram.com/">
+          <img className='logo-instagram'  src={logoInsta} alt="Logo do Instagram"/>
+          </a>
+          <a href="https://www.facebook.com/">
+          <img className='logo-face'  src={logoFace} alt="Logo do Facebook"/>
+          </a>
+        </div>
+          <p className='endereço'> Endereço:  <a href="https://www.google.com.br/maps/@-22.8619435,-43.2811485,15z">Rua Almirante Ary Rongel - Recreio dos Bandeirantes</a> </p>
+        </footer>
       </div>
     )
   }
